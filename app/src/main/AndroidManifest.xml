@@ -16,7 +16,9 @@
             </intent-filter>
         </activity>
 
+
         <service android:name=".ServiceLifecycle" />
+        <service android:name=".ForegroundService" />
 
     </application>
 

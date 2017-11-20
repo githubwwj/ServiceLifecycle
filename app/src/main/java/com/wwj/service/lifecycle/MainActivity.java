@@ -12,7 +12,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
-    private Button startService,stopService,bindService,unbindService;
+    private Button startService,stopService,bindService,unbindService,startForegroundService;
     private final String TAG=getClass().getSimpleName();
 
     @Override
@@ -28,11 +28,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         stopService=(Button)findViewById(R.id.stopService);
         bindService=(Button)findViewById(R.id.bindService);
         unbindService=(Button)findViewById(R.id.unbindService);
+        startForegroundService= (Button) findViewById(R.id.startForegroundService);
 
         startService.setOnClickListener(this);
         stopService.setOnClickListener(this);
         bindService.setOnClickListener(this);
         unbindService.setOnClickListener(this);
+        startForegroundService.setOnClickListener(this);
     }
 
     @Override
@@ -47,10 +49,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 stopService(intent);
                 break;
             case R.id.bindService:
-                bindService(intent,mServcieConnection,BIND_AUTO_CREATE);
+                bindService(intent, mServcieConnection, BIND_AUTO_CREATE);
                 break;
             case R.id.unbindService:
                 unbindService(mServcieConnection);
+                break;
+            case R.id.startForegroundService:
+                intent.setClass(this,ForegroundService.class);
+                startService(intent);
                 break;
         }
     }
