@@ -1,16 +1,6 @@
 项目视频介绍 
 ===========
 
-```
-服务的生命周期视频1
-http://www.iqiyi.com/w_19ruxyaeul.html
-```
-
-```
-服务的生命周期视频2
-http://www.iqiyi.com/w_19rv33yirt.html
-```
-
 |#|标题|视频地址|
 |---|----|-----|
 |1|服务的生命周期视频1|http://www.iqiyi.com/w_19ruxyaeul.html|
