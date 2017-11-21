@@ -13,4 +13,5 @@
 ![](https://github.com/githubwwj/ServiceLifecycle/blob/master/服务生命周期截图/绑定服务.png) 
 ![](https://github.com/githubwwj/ServiceLifecycle/blob/master/服务生命周期截图/服务多次启动.png) 
 ![](https://github.com/githubwwj/ServiceLifecycle/blob/master/服务生命周期截图/解绑服务.png) 
+![](https://github.com/githubwwj/ServiceLifecycle/blob/master/服务生命周期截图/对服务的全面了解.png) 
 
