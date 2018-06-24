@@ -20,7 +20,7 @@ public class ServiceLifecycle extends Service {
     @Nullable
     @Override
     public IBinder onBind(Intent intent) {
-        Log.d(TAG,"===========onBind============");
+       Log.e(TAG,"===========onBind============");
         return new MyBinder();
     }
 
@@ -36,14 +36,14 @@ public class ServiceLifecycle extends Service {
 
     @Override
     public boolean onUnbind(Intent intent) {
-        Log.d(TAG,"===========onUnbind============");
+        Log.e(TAG,"===========onUnbind============");
         return super.onUnbind(intent);
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         String values=intent.getStringExtra("hello");
-        Log.d(TAG,"===========onStartCommand===========values="+values);
+        Log.e(TAG,"===========onStartCommand===========values="+values);
         return super.onStartCommand(intent, flags, startId);
     }
 
@@ -56,14 +56,14 @@ public class ServiceLifecycle extends Service {
     public void onCreate() {
         super.onCreate();
         STATE=SERVICE_CREATE;
-        Log.d(TAG, "===========onCreate========STATE="+STATE);
+       Log.e(TAG, "===========onCreate========STATE="+STATE);
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
         STATE=SERVICE_DESTROY;
-        Log.d(TAG, "===========onDestroy==========STATE="+STATE);
+       Log.e(TAG, "===========onDestroy==========STATE="+STATE);
     }
 
     public int getServiceState(){
